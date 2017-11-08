@@ -1,5 +1,5 @@
 # Rope-Simulation
-A basic rope simulation using openGL
+A basic rope simulation renderer with OpenTK (OpenGL plugin)
 
 ## Manual
 	Wait for rope to relax
