@@ -7,4 +7,4 @@ A basic rope simulation using openGL
 	Press Right clock to change render mode
 
 ## Known issues
-	right side vertex of point 1 doesnt set correctly
+	right side vertex of point 1 doesn't set correctly
