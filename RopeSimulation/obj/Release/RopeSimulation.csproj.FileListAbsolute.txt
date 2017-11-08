@@ -1,0 +1,10 @@
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Release\RopeSimulation.exe.config
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Release\RopeSimulation.exe
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Release\RopeSimulation.pdb
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Release\OpenTK.dll
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Release\OpenTK.xml
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Release\RopeSimulation.csprojResolveAssemblyReference.cache
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Release\RopeSimulation.Properties.Resources.resources
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Release\RopeSimulation.csproj.GenerateResource.Cache
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Release\RopeSimulation.exe
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Release\RopeSimulation.pdb

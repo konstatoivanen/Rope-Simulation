@@ -1,0 +1,31 @@
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.csprojResolveAssemblyReference.cache
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.Properties.Resources.resources
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.csproj.GenerateResource.Cache
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.csproj.CoreCompileInputs.cache
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.exe.config
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.exe
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.pdb
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\bin\Debug\OpenTK.dll
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\bin\Debug\OpenTK.xml
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.exe
+C:\Users\KonstaToi1\source\repos\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.pdb
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.exe.config
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.exe
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.pdb
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.exe
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\bin\Debug\RopeSimulation.pdb
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\bin\Debug\OpenTK.dll
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\bin\Debug\OpenTK.xml
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.csprojResolveAssemblyReference.cache
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.Properties.Resources.resources
+C:\Users\Rocker\Desktop\RopeSimulation\RopeSimulation\RopeSimulation\obj\Debug\RopeSimulation.csproj.GenerateResource.Cache
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Debug\RopeSimulation.exe.config
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Debug\RopeSimulation.exe
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Debug\RopeSimulation.pdb
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Debug\RopeSimulation.exe
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Debug\RopeSimulation.pdb
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Debug\OpenTK.dll
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\bin\Debug\OpenTK.xml
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Debug\RopeSimulation.csprojResolveAssemblyReference.cache
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Debug\RopeSimulation.Properties.Resources.resources
+G:\The P-mar Project\GitHub\Rope-Simulation\RopeSimulation\obj\Debug\RopeSimulation.csproj.GenerateResource.Cache
