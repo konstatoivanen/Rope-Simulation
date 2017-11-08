@@ -15,7 +15,7 @@ namespace Ropesim
     class Renderer
     {
         private static int            startTime = 0;
-        private static RopeSimulation rope = new RopeSimulation(12, 0.01f, 20f, 5f, 25, 0.5f, new Vector2(0, 4));
+        private static RopeSimulation rope = new RopeSimulation(12, 0.01f, 20f, 4f, 25, 0.5f, new Vector2(0, 4));
         private static Random         rnd  = new Random();
 
         public enum RenderMode
@@ -83,6 +83,7 @@ namespace Ropesim
 
                     float curTime = time;
                     float delta = curTime - lastTime;
+                          delta = Math.Max(0.01f, delta); //Min Frame deltatime
                     lastTime = curTime;
 
                     //Dont simulate whe not focused
@@ -91,7 +92,7 @@ namespace Ropesim
                         //Display fps in the title
                         game.Title = "Rope Simulation FPS : " + (1 / delta).ToString();
 
-                        rope.Update(delta * 2, new Vector2(0, -20));
+                        rope.Update(delta * 4, new Vector2(0, -20));
 
                         // demo controls
                         if (game.Keyboard[Key.Escape])
@@ -133,8 +134,17 @@ namespace Ropesim
 
                             GL.Color4(Color.Cyan);
 
-                            for (int i = 0; i < rope.m_triangles.Length; ++i)
+                            for (int i = 0; i < rope.m_triangles.Length; i += 3)
+                            {
                                 GL.Vertex3(rope.m_vertices[rope.m_triangles[i]]);
+                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i +1]]);
+
+                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i +1]]);
+                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i +2]]);
+
+                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i +2]]);
+                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i]]);
+                            }
 
                             break;
 
@@ -156,8 +166,8 @@ namespace Ropesim
 
                             GL.Color4(Color.Green);
 
-                            for (int i = 0; i < rope.m_triangles.Length; ++i)
-                                GL.Vertex3(rope.m_vertices[rope.m_triangles[i]]);
+                            for (int i = 0; i < rope.m_vertices.Length; ++i)
+                                GL.Vertex3(rope.m_vertices[i]);
 
                             break;
 
@@ -248,14 +258,6 @@ namespace Ropesim
                 //Add velocity to state
                 state += velocity * delta;
 
-                //State Nan Check
-                if (float.IsNaN(state.X + state.Y))
-                    state = restState;
-
-                //Velocity Nan Check
-                if (float.IsNaN(velocity.X + velocity.Y))
-                    velocity = Vector2.Zero;
-
                 //Set velocity to zero when small enough
                 if (velocity.LengthSquared < 0.001f)
                     velocity = Vector2.Zero;
@@ -283,14 +285,21 @@ namespace Ropesim
             }
 
             //Normal of reststate - state
-            public  Vector3 ThicknessOffset(float thickness)
-            {        
-                Vector2 v = state - restState;
+            public  Vector3 normal
+            {
+                get
+                {
+                    if (pinned)
+                        return new Vector3(1, 0, 0);
 
-                v   = new Vector2(-v.Y, v.X);
-                v.Normalize();
-                v  *= thickness;
-                return new Vector3(v.X, v.X, 0);
+                    Vector2 v = state - restState;
+
+                    v = new Vector2(-v.Y, v.X);
+
+                    v.Normalize();
+
+                    return  new Vector3(v.X, v.Y, 0);
+                }
             }    
 
             //Convert state to Vector3
@@ -324,24 +333,14 @@ namespace Ropesim
 
             for(int i = 0; i < points -1; ++i)
             {
-                
                 //Clockwise
-                temp.Add(i + 1);
                 temp.Add(i);
-                temp.Add(i + (m_vertices.Length / 2));
-
-                temp.Add(i + (m_vertices.Length / 2) + 1);
-                temp.Add(i + 1);
-                temp.Add(i + (m_vertices.Length /2));
-
-                //Counter Clockwise
-                temp.Add(i + (m_vertices.Length / 2));
-                temp.Add(i);
+                temp.Add(i + points);
                 temp.Add(i + 1);
 
-                temp.Add(i + (m_vertices.Length / 2));
+                temp.Add(i + points);
+                temp.Add(i + points + 1);
                 temp.Add(i + 1);
-                temp.Add(i + (m_vertices.Length / 2) + 1);
             }
 
             m_triangles = temp.ToArray();
@@ -358,22 +357,20 @@ namespace Ropesim
         }
         private void UpdateVertices()
         {
-            Vector3 v = new Vector3(m_thickness, 0 , 0);
+            Vector3 v;
+            Vector3 p;
 
-            m_vertices[0]                   = particles[0].State3D + v;
-            m_vertices[particles.Length]    = particles[0].State3D - v;
-
-            for (int i = 1; i < particles.Length; ++i)
+            
+            for (int i = 0; i < particles.Length; ++i)
             {
-                v = particles[i].ThicknessOffset(m_thickness);
+                v = particles[i].normal * m_thickness;
+                p = particles[i].State3D;
 
-                m_vertices[i]                       = particles[i].State3D + v;
-                m_vertices[i + particles.Length]    = particles[i].State3D - v;
+                m_vertices[i] = p + v;
+                m_vertices[i + particles.Length] = p - v;
+               
             }
 
-            v = particles[particles.Length -1].ThicknessOffset(m_thickness);
-
-            m_vertices[m_vertices.Length -1] = particles[particles.Length - 1].State3D + v;
         }
 
         //Add Velocity to spring with linear 0-1 weight from top to bottom

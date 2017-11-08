@@ -1,10 +1,7 @@
 # Rope-Simulation
-A basic rope simulation rendered with OpenTK (OpenGL plugin)
+A basic rope/elastic band simulation rendered with OpenTK (OpenGL plugin)
 
 ## Manual
-	Wait for rope to relax
-	Press Left click to add velocity to rope
-	Press Right clock to change render mode
-
-## Known issues
-	right side vertex of point 1 doesn't set correctly
+	Wait for rope to relax as the initial vertex positions cause it to fly up and down a bit.
+	Press Left click to add velocity to rope (direction is window center - mouse position).
+	Press Right click to change render mode.
