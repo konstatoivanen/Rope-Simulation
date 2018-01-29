@@ -112,7 +112,7 @@ namespace Ropesim
                     float aspect    = game.Width / (float)game.Height;
                     float zNear     = 0.1f;
                     float zFar      = 500;
-                    var projMat     = Matrix4.CreatePerspectiveFieldOfView(fov, aspect, zNear, zFar);
+                    var projMat     =                     Matrix4.CreateOrthographic(25, 25, 0.1f, 500);
                     GL.MatrixMode(MatrixMode.Projection);
                     GL.LoadMatrix(ref projMat);
                     #endregion
